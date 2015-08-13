@@ -19,7 +19,7 @@
 
  Este código de exemplo está em domínio público.
 
- https://github.com/eletronite/Arduino
+ https://github.com/eletronite/arduino
  */
 
 // constantes não mudam. Eles são usadas aqui para 
