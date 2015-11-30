@@ -44,5 +44,5 @@ ISR(TIMER1_COMPA_vect)          // rotina de serviço de interrupção
  
 void loop()
 {
-  // aqui você pode adicionar outras atividades
+  // aqui você pode realizar outras atividades
 }
