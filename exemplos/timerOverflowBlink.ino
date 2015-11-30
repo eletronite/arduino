@@ -22,7 +22,7 @@
  
 void setup()
 {
-  pinMode(ledPin, OUTPUT);
+  pinMode(pinoLED, OUTPUT);
  
   // inicialização do timer1
   noInterrupts();         // desbilita todas as interrupções
@@ -38,7 +38,7 @@ void setup()
 ISR(TIMER1_OVF_vect)        // rotina de serviço de interrupção
 {
   TCNT1 = 34286;            // pré carrega contador
-  digitalWrite(ledPin, digitalRead(ledPin) ^ 1); // pisca o LED
+  digitalWrite(pinoLED, digitalRead(pinoLED) ^ 1); // pisca o LED
 }
  
 void loop()
