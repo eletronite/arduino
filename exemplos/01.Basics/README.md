@@ -1,0 +1,13 @@
+# arduino/exemplos/01.Basics - Exemplos Básicos
+ - AnalogReadSerial.ino
+  - Lê a entrada analógica no pino A0, imprime o resultado no monitor serial.
+ - BareMinimum.ino
+  - Estrutura básica para um programa.
+ - DigitalReadSerial.ino
+  - Lê uma entrada digital no pino 2, imprime o resultado no monitor serial.
+ - Fade.ino
+  - Este exemplo mostra como dimerizar (fade) um LED no pino 9 usando a função analogWrite().
+ - ReadAnalogVoltage.ino
+  - Lê uma entrada analógica no pino A0, converte seu valor para tensõa, e imprime o resultado no monitor serial.
+ - blink.ino
+  - Liga um LED por um segundo, depois desliga por um segundo, repetidamente.
