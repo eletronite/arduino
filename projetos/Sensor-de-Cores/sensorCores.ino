@@ -87,8 +87,8 @@ void loop() {
 void calibrar_sensor() {
   
   // Analiza a luminosidade do ambiente
-  ambiente_cal = mediaLeituras(10);
-  ambiente_cal -= ambiente_cal/10; // 10% de tolerância para facilitar detecção
+  ambiente_cal = mediaLeituras(mediasSensor);
+  ambiente_cal -= ambiente_cal/toleraciaDeteccao; // Tolerância para facilitar detecção
   
   Serial.println("Aproxime um objeto qualquer ao sensor");
   delay(5000); // Aguarda 5 segundos para aproximação do objeto
@@ -96,8 +96,8 @@ void calibrar_sensor() {
   Serial.println("Calibrando...");
 
   // Analiza a intesidade de luz com o objeto colocado em frente ao sensor
-  objeto_cal = mediaLeituras(10);
-  objeto_cal += objeto_cal/10; // 10% de tolerância para facilitar detecção
+  objeto_cal = mediaLeituras(mediasSensor);
+  objeto_cal += objeto_cal/toleraciaDeteccao; // Tolerância para facilitar detecção
   
   Serial.println("Remova o objeto");
   while(analogRead(ldr) < ambiente_cal); // Aguarda a remoção do objeto
@@ -122,7 +122,7 @@ void calibrar_sensor() {
     delay(100); // Aguarda 100ms para estabilizar o LDR
 
     // Realiza leitura do sensor e avalia se é o maior valor encontrado para o vermelho
-    leitura_ldr[0] = mediaLeituras(10);
+    leitura_ldr[0] = mediaLeituras(mediasSensor);
     if (leitura_ldr[0] > color_cal[0]) {
       color_cal[0] = leitura_ldr[0];
     }
@@ -134,7 +134,7 @@ void calibrar_sensor() {
     delay(100); // Aguarda 100ms para estabilizar o LDR
     
     // Realiza leitura do sensor e avalia se é o maior valor encontrado para o verde
-    leitura_ldr[1] = mediaLeituras(10);
+    leitura_ldr[1] = mediaLeituras(mediasSensor);
     if (leitura_ldr[1] > color_cal[1]) {
       color_cal[1] = leitura_ldr[1];
     }
@@ -146,7 +146,7 @@ void calibrar_sensor() {
     delay(100); // Aguarda 100ms para estabilizar o LDR
     
     // Realiza leitura do sensor e avalia se é o maior valor encontrado para o azul
-    leitura_ldr[2] = mediaLeituras(10);
+    leitura_ldr[2] = mediaLeituras(mediasSensor);
     if (leitura_ldr[2] > color_cal[2]) {
       color_cal[2] = leitura_ldr[2];
     }
@@ -178,7 +178,7 @@ void calibrar_sensor() {
     digitalWrite(led_r, HIGH);
     delay(100);
     
-    leitura_ldr[0] = mediaLeituras(10);
+    leitura_ldr[0] = mediaLeituras(mediasSensor);
     if (leitura_ldr[0] < black_cal[0]) {
       black_cal[0] = leitura_ldr[0];
     }
@@ -189,7 +189,7 @@ void calibrar_sensor() {
     digitalWrite(led_g, HIGH);
     delay(100);
     
-    leitura_ldr[1] = mediaLeituras(10);
+    leitura_ldr[1] = mediaLeituras(mediasSensor);
     if (leitura_ldr[1] < black_cal[1]) {
       black_cal[1] = leitura_ldr[1];
     }
@@ -200,7 +200,7 @@ void calibrar_sensor() {
     digitalWrite(led_b, HIGH);
     delay(100);
     
-    leitura_ldr[2] = mediaLeituras(10);
+    leitura_ldr[2] = mediaLeituras(mediasSensor);
     if (leitura_ldr[2] < black_cal[2]) {
       black_cal[2] = leitura_ldr[2];
     }
@@ -244,7 +244,7 @@ void leSensor() {
   digitalWrite(led_r, HIGH); // Acende o LED vermelho
   delay(100); // Aguarda 100ms para o LDR estabilizar
   
-  leitura_ldr[0] = mediaLeituras(10); // Realiza a leitura do sensor
+  leitura_ldr[0] = mediaLeituras(mediasSensor); // Realiza a leitura do sensor
   
   digitalWrite(led_r, LOW); // Apaga o LED vermelho
   delay(100); // Aguarda 100ms para o LDR estabilizar
@@ -252,7 +252,7 @@ void leSensor() {
   digitalWrite(led_g, HIGH); // Acende o LED verde
   delay(100); // Aguarda 100ms para o LDR estabilizar
   
-  leitura_ldr[1] = mediaLeituras(10); // Realiza a leitura do sensor
+  leitura_ldr[1] = mediaLeituras(mediasSensor); // Realiza a leitura do sensor
   
   digitalWrite(led_g, LOW); // // Apaga o LED verde
   delay(100); // Aguarda 100ms para o LDR estabilizar
@@ -260,7 +260,7 @@ void leSensor() {
   digitalWrite(led_b, HIGH); // Acende o LED azul
   delay(100); // Aguarda 100ms para o LDR estabilizar
   
-  leitura_ldr[2] = mediaLeituras(10); // Realiza a leitura do sensor
+  leitura_ldr[2] = mediaLeituras(mediasSensor); // Realiza a leitura do sensor
   
   digitalWrite(led_b, LOW); // Apaga o LED azul
   
