@@ -19,7 +19,7 @@
    - LDR
    - Fios
 
-  mais informações: 
+  mais informações: https://github.com/eletronite/arduino/tree/master/projetos/Sensor-de-Cores
   
   criado 22 Janeiro 2016
   por Ricardo Alcântara
