@@ -11,3 +11,5 @@ Hardware Necessário:
  - Resistor de 10k ohms
  - LDR
  - Fios
+
+![Esquemático](http://www.eletronite.com.br/img/aprenda/76511125a9888c8a6e49f1d5130279f7.png "Esquemático")
