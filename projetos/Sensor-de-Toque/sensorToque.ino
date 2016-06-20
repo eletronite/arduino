@@ -6,7 +6,7 @@
   ao pino 8 através de um fio.
   
   Qualquer outra superfície metálica pode ser utilizada no lugar do
-  pape alumínio.
+  papel alumínio.
   
   O sensor funciona medindo o tempo de carga do capacitor formado pelo 
   papel alumínio e suas interações com o ambiente e o circuito, cuja 
