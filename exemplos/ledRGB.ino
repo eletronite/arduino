@@ -7,7 +7,7 @@
    - 2x Resistores de 100 ohms
    - 1x Resistor de 180 ohms
    - Fios
-  mais informações: https://www.eletronite.com.br/projetos/
+  mais informações: https://www.eletronite.com.br/projetos/utilizando-leds-rgb
   
   criado 27 Dezembro 2016
   por Ricardo Alcântara
