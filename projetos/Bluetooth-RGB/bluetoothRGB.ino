@@ -9,7 +9,7 @@
    - 2x Resistores de 100 ohms
    - 1x Resistor de 180 ohms
    - Fios
-  mais informações: https://www.eletronite.com.br/projetos/controlando-led-rgb-com-celular
+  mais informações: http://www.eletronite.com.br/projetos/controlando-led-rgb-com-celular
   
   criado 03 Janeiro 2017
   por Ricardo Alcântara
