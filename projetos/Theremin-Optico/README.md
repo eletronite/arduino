@@ -7,3 +7,7 @@ Este projeto implementa um theremin óptico utilizando dois LDRs e um alto-falan
    - Resistor de 100 ohms
    - Alto-falante de 8 ohms
    - Fios
+
+Diagrama e esquemático:
+![Diagram do circuito](https://github.com/eletronite/arduino/blob/master/projetos/Theremin-Optico/esquematico.jpg)
+![Esquemático](https://github.com/eletronite/arduino/blob/master/projetos/Theremin-Optico/theremin.png)
